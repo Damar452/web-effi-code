@@ -454,7 +454,7 @@ input[type="color"] {
   -----------------------------------------*/
 @media (max-width: 575px) {
   .progress-wrap {
-    right: 15px;
+    right: 15px !important;
     bottom: 15px;
   }
 }

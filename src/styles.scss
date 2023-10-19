@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./theme/animate.scss";
+@import "./theme/animated-counter-prograssbar.scss";
+@import "./theme/font-awesome-pro.scss";
+@import "./theme/lity.min.scss";
+@import "./theme/meanmenu.scss";
+@import "./theme/preloader.scss";
+@import "./theme/responsive.scss";
+@import "./theme/spacing.scss";
+@import "./theme/style.scss";
+
+@import '~owl.carousel/dist/assets/owl.carousel.min.css';
+@import '~owl.carousel/dist/assets/owl.theme.default.min.css';

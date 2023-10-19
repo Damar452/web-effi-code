@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SidebarService } from './core/services/sidebar.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'web-effi-code';
+
+  public sidebarOpen!: Observable<boolean>;
+  public isLoading = true;
+
+  constructor(private sidebarService: SidebarService) { }
+
+  ngOnInit() {
+    this.getSidebarStatus();
+    this.changeLoading();
+  }
+
+  public changeLoading(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
+  }
+
+  public toggleSidebar(): void {
+    this.sidebarService.toggleSidebar(false);
+  }
+
+  private getSidebarStatus() {
+    this.sidebarOpen = this.sidebarService.sidebarOpen$;
+  }
 }
